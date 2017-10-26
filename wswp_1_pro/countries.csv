@@ -1,0 +1,12 @@
+area,population,iso,country,capital,continent,tld,currency_code,currency_name,phone,postal_code_format,postal_code_regex,languages,neighbours
+431 square kilometres,"285,653",BB,Barbados,Bridgetown,NA,.bb,BBD,Dollar,+1-246,BB#####,^(?:BB)*(\d{5})$,en-BB, 
+"144,000 square kilometres","156,118,464",BD,Bangladesh,Dhaka,AS,.bd,BDT,Taka,880,####,^(\d{4})$,"bn-BD,en",MM IN 
+665 square kilometres,"738,004",BH,Bahrain,Manama,AS,.bh,BHD,Dinar,973,####|###,^(\d{3}\d?)$,"ar-BH,en,fa,ur", 
+"13,940 square kilometres","301,790",BS,Bahamas,Nassau,NA,.bs,BSD,Dollar,+1-242,,,en-BS, 
+"86,600 square kilometres","8,303,512",AZ,Azerbaijan,Baku,AS,.az,AZN,Manat,994,AZ ####,^(?:AZ)*(\d{4})$,"az,ru,hy",GE IR AM TR RU 
+"83,858 square kilometres","8,205,000",AT,Austria,Vienna,EU,.at,EUR,Euro,43,####,^(\d{4})$,"de-AT,hr,hu,sl",CH DE HU SK CZ IT SI LI 
+"7,686,850 square kilometres","21,515,754",AU,Australia,Canberra,OC,.au,AUD,Dollar,61,####,^(\d{4})$,en-AU, 
+193 square kilometres,"71,566",AW,Aruba,Oranjestad,NA,.aw,AWG,Guilder,297,,,"nl-AW,es,en", 
+"29,800 square kilometres","2,968,000",AM,Armenia,Yerevan,AS,.am,AMD,Dram,374,######,^(\d{6})$,hy,GE IR AZ TR 
+"2,766,890 square kilometres","41,343,201",AR,Argentina,Buenos Aires,SA,.ar,ARS,Peso,54,@####@@@,^([A-Z]\d{4}[A-Z]{3})$,"es-AR,en,it,de,fr,gn",CL BO UY PY BR 
+443 square kilometres,"86,754",AG,Antigua and Barbuda,St. John's,NA,.ag,XCD,Dollar,+1-268,,,en-AG, 
