@@ -2,8 +2,7 @@ import re
 import urllib.parse
 import urllib.robotparser
 from collections import deque
-from .Throttle import Throttle
-from .downloader import download
+from downloader import Downloader
 
 def getRobots(url):
     """
@@ -44,7 +43,7 @@ def getLinks(html):
     webpageRegex = re.compile('<a\shref="(.*?)"',re.IGNORECASE)
     return webpageRegex.findall(str(html))
 
-def linkCrawler(seedUrl, linkRegex=None, delay=5, maxDepth=-1, maxUrls=-1, headers=None, userAgent='wswp', proxy=None, numRetries=1, scrapeCallBack=None):
+def linkCrawler(seedUrl, linkRegex=None, delay=5, maxDepth=-1, maxUrls=-1, headers=None, userAgent='wswp', proxies=None, numRetries=1, scrapeCallBack=None,cache=None):
     """
     Crawl from the given seed URL following links matched by linkRegex
     :param seedUrl:  起始url
@@ -62,18 +61,14 @@ def linkCrawler(seedUrl, linkRegex=None, delay=5, maxDepth=-1, maxUrls=-1, heade
     seen = { seedUrl:0}
     numUrls = 0
     rp = getRobots(seedUrl)
-    throttle = Throttle(delay)
+    Down = Downloader(delay=delay,userAgent=userAgent,proxies=proxies,numRetries=numRetries,cache=cache)
 
-    headers = headers or {}
-    if userAgent:
-        headers['User-agent'] = userAgent
 
     while crawlQueue:
         url = crawlQueue.pop()
 
         if rp.can_fetch(userAgent, url):
-            throttle.wait(url)
-            html = download(url, headers, proxy=proxy, numRetries=numRetries)
+            html = Down(url)
             links = []
 
             if scrapeCallBack:
