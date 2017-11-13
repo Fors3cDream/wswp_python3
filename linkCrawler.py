@@ -2,7 +2,7 @@ import re
 import urllib.parse
 import urllib.robotparser
 from collections import deque
-from downloader import Downloader
+from .downloader import Downloader
 
 def getRobots(url):
     """

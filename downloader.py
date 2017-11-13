@@ -12,8 +12,8 @@ DEFAULT_TIMEOUT = 60
 
 
 class Downloader:
-    def __init__(self,delay=DEFAULT_DELAY,userAgent=DEFAULT_AGENT,proxies=None,numRetries=DEFAULT_RETRIES, timeOut=DEFAULT_TIMEOUT, opener=None,cache=None):
-        socket.setdefaulttimeout(timeOut)
+    def __init__(self,delay=DEFAULT_DELAY,userAgent=DEFAULT_AGENT,proxies=None,numRetries=DEFAULT_RETRIES, timeout=DEFAULT_TIMEOUT, opener=None,cache=None):
+        socket.setdefaulttimeout(timeout)
         self.throttle = Throttle(delay)
         self.userAgent = userAgent
         self.proxies = proxies
